@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Card from "./Card";
+import Info from "./Info";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  // constructor(x, y, z) {
+  //   super(someArguments);
+  // }
+
+  render() {
+    return (
+      <div className="App">
+        <Card
+          name="Garima"
+          age={21}
+          YOE={10}
+          geek="geekster"
+          hello="geekster Guys"
+        />
+        <Card name="Shikha" age={22} YOE={100000} geek="Garima"/>
+        <Card name="Dipankar" age={23} YOE={100000} geek="Garima" />
+        <Card name="Kaish" age={22} YOE={100000} geek="Garima" />
+      </div>
+    );
+  }
 }
 
+// new Card("geekster", age:26, YOE:10)
+
 export default App;
+
+// JSX = JS XML
